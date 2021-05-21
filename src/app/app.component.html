@@ -1,6 +1,7 @@
 <ion-app>
+
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu menuId="main-content" contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Mail</ion-list-header>
@@ -26,7 +27,15 @@
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content">
-      <p style="display: grid; place-items: center; margin-top: 30vh; font-size: 25px;">Hello Everybody</p>
+      <div>
+        <ion-button color="unset" slot="start">
+          <ion-menu-button color="unset" menu="main-content"></ion-menu-button>
+        </ion-button>
+        <p style="display: grid; place-items: center; margin-top: 30vh; font-size: 25px;">
+          Hello Everybody
+        </p>
+      </div>
     </ion-router-outlet>
   </ion-split-pane>
+
 </ion-app>
