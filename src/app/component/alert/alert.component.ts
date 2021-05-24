@@ -13,9 +13,9 @@ export class AlertComponent {
   async presentAlert() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
+      header: 'Last slot!',
+      subHeader: '019 271 8870',
+      message: 'Peluang terakhir untuk merebut peluang ini',
       buttons: ['OK']
     });
 

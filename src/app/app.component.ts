@@ -7,14 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Dashboard', url: '/dashboard', icon: 'ribbon' },
-    { title: 'Inbox', url: '/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Haji', url: '/haji', icon: 'ribbon' },
+    { title: 'Umrah', url: '/umrah', icon: 'mail' },
+    { title: 'International', url: '/folder/International', icon: 'earth' },
+    { title: 'Domestic', url: '/folder/Domestic', icon: 'boat' },
+    { title: 'Rental', url: '/rental', icon: 'car-sport' },
+    { title: 'Transport', url: '/transport', icon: 'bus' },
+    { title: 'Contact us', url: '/contact-us', icon: 'call' },
+    { title: 'Construction', url: '/construction', icon: 'warning' },
   ];
-  public labels = ['Dodol', 'Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  public photos = [
+    'Turkey',
+    'Lombok',
+    'Friends',
+    'Notes',
+    'Work',
+    'Travel',
+    'Reminders'];
+  constructor() { }
 }
