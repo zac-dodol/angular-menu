@@ -1,34 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-button color='transparent' style='box-shadow: transparent;' slot="start">
-      <ion-menu-button color='transparent' style='box-shadow: transparent;' menu="main-content"></ion-menu-button>
-    </ion-button>
-    <ion-title>Umrah</ion-title>
-    <ion-img class="logo" src='./assets/icon/logo.png'></ion-img>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title size="large">Umrah</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
   <ion-card>
 
     <ion-card-header>
-      <ion-card-subtitle>Choose a date</ion-card-subtitle>
-      <ion-card-title>Full Package</ion-card-title>
+      <ion-card-subtitle>Pilih tarikh <span style="font-size:'18px'">selepas</span> PKP</ion-card-subtitle>
+      <ion-card-title>Pakej Umrah penuh</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      Best Umrah Sales & Promotions.
+      Pakej Umrah terbaik dengan diskaun terhebat.
 
       <ion-item lines="none">
-        <ion-icon name="bed-outline"></ion-icon>
-        <ion-label> 5 star accomodations & service</ion-label>
-        <!-- <ion-button fill="outline" slot="end">View</ion-button> -->
+        <ion-icon name="bed-outline" slot="start"></ion-icon>
+        <ion-label> Penginapan 5 bintang</ion-label>
       </ion-item>
 
       <ion-item lines="none">
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-label> Full service</ion-label>
+        <ion-icon name="star-outline" slot="start"></ion-icon>
+        <ion-label> Perkhidmatan sepenuhnya</ion-label>
       </ion-item>
     </ion-card-content>
 
