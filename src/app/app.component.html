@@ -4,7 +4,9 @@
     <ion-menu menuId="main-content" contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Going somewhere?</ion-list-header>
+          <ion-list-header>
+            Anda pilih, kami bawa &nbsp;<ion-icon name="earth-outline"></ion-icon>
+          </ion-list-header>
           <ion-note>saidinatravel@yahoo.com</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
@@ -16,13 +18,24 @@
           </ion-menu-toggle>
         </ion-list>
 
-        <ion-list id="labels-list">
+        <ion-list id="Gallery-list">
           <ion-list-header>Gallery</ion-list-header>
 
-          <ion-item *ngFor="let photo of photos" lines="none">
-            <ion-icon slot="start" name="images-outline"></ion-icon>
+          <ion-menu-toggle auto-hide="false" *ngFor="let q of gallery; let o = index">
+            <ion-item routerDirection="root" [routerLink]="[q.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon slot="start" [ios]="q.icon + '-outline'" [md]="q.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ q.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header>Labels</ion-list-header>
+
+          <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon slot="end" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ photo }}</ion-label>
+            <ion-label>{{ label }}</ion-label>
           </ion-item>
         </ion-list>
       </ion-content>

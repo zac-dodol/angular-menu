@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/folder/folder.module').then( m => m.FolderPageModule)
   },
   {
+    path: 'gallery/:id',
+    loadChildren: () => import('./pages/gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
+  {
     path: 'haji',
     loadChildren: () => import('./pages/haji/dashboard.module').then( m => m.DashboardPageModule)
   },
@@ -34,7 +38,16 @@ const routes: Routes = [
   {
     path: 'transport',
     loadChildren: () => import('./pages/transport/transport.module').then( m => m.TransportPageModule)
+  },
+  {
+    path: 'domestic',
+    loadChildren: () => import('./pages/domestic/domestic.module').then( m => m.DomesticPageModule)
+  },
+  {
+    path: 'international',
+    loadChildren: () => import('./pages/international/international.module').then( m => m.InternationalPageModule)
   }
+
 ];
 
 @NgModule({

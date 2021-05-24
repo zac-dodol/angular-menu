@@ -4,20 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RentalPageRoutingModule } from './rental-routing.module';
+import { GalleryPageRoutingModule } from './gallery-routing.module';
+
+import { GalleryPage } from './gallery.page';
 import { ComponentModule } from '../../component/component.module';
-
-import { RentalPage } from './rental.page';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RentalPageRoutingModule,
+    GalleryPageRoutingModule,
     ComponentModule
   ],
-  declarations: [RentalPage]
+  declarations: [GalleryPage]
 })
-export class RentalPageModule {}
+export class GalleryPageModule {}

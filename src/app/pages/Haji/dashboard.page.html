@@ -1,19 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-button color='transparent' style='box-shadow: transparent;' slot="start">
-      <ion-menu-button color='transparent' style='box-shadow: transparent;' menu="main-content"></ion-menu-button>
-    </ion-button>
-    <ion-title>Haji</ion-title>
-    <ion-img class="logo" src='./assets/icon/logo.png'></ion-img>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title size="large">Haji</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
   <ion-card>
 
     <ion-card-header>
-      <ion-card-subtitle>Choose a date</ion-card-subtitle>
+      <ion-card-subtitle>Choose a date <span style="font-size:'18px'">after</span> MCO</ion-card-subtitle>
       <ion-card-title>Full Package</ion-card-title>
     </ion-card-header>
 
