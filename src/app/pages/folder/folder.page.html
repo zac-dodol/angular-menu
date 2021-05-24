@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+    <ion-img class="logo" src='./assets/icon/logo.png'></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
+        Components
+      </a>
+    </p>
+  </div>
+
+  <p>
+    <app-action-sheet></app-action-sheet>
+  </p>
+  <p>
+    <app-alert></app-alert>
+  </p>
+
+  <!-- Item with badge on the right -->
+  <ion-item>
+    <ion-label>My Item</ion-label>
+    <ion-badge slot="end" color="warning">22</ion-badge>
+  </ion-item>
+
+  <br><br><br><br><br><br><br><br>
+
+  <!-- Item with badge on the left-->
+  <ion-item>
+    <ion-badge slot="start">11</ion-badge>
+    <ion-label>My Item</ion-label>
+  </ion-item>
+
+  <ion-chip [disabled]="true">
+    <ion-label>Disabled Chip</ion-label>
+  </ion-chip>
+
+  <ion-chip>
+    <ion-icon name="heart" color="danger"></ion-icon>
+    <ion-label color="danger">Default</ion-label>
+  </ion-chip>
+
+  <ion-chip>
+    <ion-label>Button Chip</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+
+  <ion-chip>
+    <ion-icon name="pin" color="primary"></ion-icon>
+    <ion-label>Icon Chip</ion-label>
+    <ion-icon name="close"></ion-icon>
+  </ion-chip>
+
+  <ion-chip>
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label>Avatar Chip</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+
+  <app-fab-left></app-fab-left>
+
+</ion-content>
+
+<app-footer></app-footer>

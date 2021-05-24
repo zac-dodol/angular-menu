@@ -117,3 +117,16 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.logo{
+  width: 25%;
+  position: absolute;
+  right: 11px;
+  top: 13px;
+}
+
+.presents {
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+}

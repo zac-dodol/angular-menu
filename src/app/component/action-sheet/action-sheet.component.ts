@@ -31,6 +31,7 @@ export class ActionSheetComponent {
         text: 'Play (open modal)',
         icon: 'caret-forward-circle',
         handler: () => {
+          window.location.href = 'call:' + 60192718870;
           console.log('Play clicked');
         }
       }, {
@@ -38,6 +39,7 @@ export class ActionSheetComponent {
         icon: 'heart',
         handler: () => {
           console.log('Favorite clicked');
+          window.location.href = 'email:' + 'saidinatravel@yahoo.com';
         }
       }, {
         text: 'Cancel',

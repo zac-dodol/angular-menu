@@ -4,8 +4,8 @@
     <ion-menu menuId="main-content" contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Mail</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+          <ion-list-header>Going somewhere?</ion-list-header>
+          <ion-note>saidinatravel@yahoo.com</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
@@ -17,23 +17,46 @@
         </ion-list>
 
         <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
+          <ion-list-header>Gallery</ion-list-header>
 
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
+          <ion-item *ngFor="let photo of photos" lines="none">
+            <ion-icon slot="start" name="images-outline"></ion-icon>
+            <ion-icon slot="end" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ photo }}</ion-label>
           </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
+
     <ion-router-outlet id="main-content">
       <div>
+
         <ion-button color="unset" slot="start">
           <ion-menu-button color="unset" menu="main-content"></ion-menu-button>
         </ion-button>
+
+        <ion-img class="logo" src='./assets/icon/logo.png'></ion-img>
+
         <p style="display: grid; place-items: center; margin-top: 30vh; font-size: 25px;">
-          Hello Everybody
+          Saidina Travel & Services
         </p>
+
+        <p class="presents">
+          presents to you
+        </p>
+
+        <ion-menu-button color="unset" menu="main-content">
+          <ion-icon name='airplane-outline'></ion-icon>
+          <ion-icon name='boat-outline'></ion-icon>
+          <ion-icon name='car-sport-outline'></ion-icon>
+          <ion-icon name='earth-outline'></ion-icon>
+        </ion-menu-button>
+
+        <ion-menu-button>
+          <span class="presents">Swipe</span>
+          <ion-icon size="small" name="arrow-forward-outline"></ion-icon>
+        </ion-menu-button>
+
       </div>
     </ion-router-outlet>
   </ion-split-pane>
